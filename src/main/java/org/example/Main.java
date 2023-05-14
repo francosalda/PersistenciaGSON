@@ -11,7 +11,16 @@ import java.util.List;
 public class Main {
     public static void main(String[] args)
     {
+        Saver saver = new Saver("./autos.txt");
+        saver.abrirArchivoLectura();
+        String input;
+        while( (input = saver.leer()) != null)
+        {
+            System.out.println(input);
+        }
 
+        saver.cerrarArchivo();
+/*
         ArrayList<Auto> listaAutos = new ArrayList<>();
         Auto auto1 = new Auto("Honda Civic",2007,200);
         Auto auto2 = new Auto("Fiat 147",1989,65);
@@ -20,20 +29,10 @@ public class Main {
         listaAutos.add(auto2);
         listaAutos.add(auto3);
 
-       /* String dataOutput = "[ ";
-        for(Auto auto : listaAutos)
-        {
-            dataOutput = dataOutput.concat(auto.serializar());
-            dataOutput = dataOutput.concat(",");
-        }
-       dataOutput = dataOutput.concat(" ]");
-        //System.out.println(dataOutput);
-*/
+
         final Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
         final String dataOutput = prettyGson.toJson(listaAutos);
-        System.out.println(dataOutput);
-
-
+        //System.out.println(dataOutput);
 
 
         final Gson gson = new Gson();
@@ -41,9 +40,9 @@ public class Main {
         final List<Auto> listadoAutos = gson.fromJson(dataOutput, tipoListaAutos);
         for(Auto auto: listadoAutos)
         {
-            auto.mostrar();
+         //   auto.mostrar();
         }
 
-
+*/
     }
 }
