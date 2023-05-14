@@ -55,28 +55,5 @@ public class Main {
 
         }
 
-
-     /*   saver.abrirArchivoLectura();
-        String input;
-        while( (input = saver.leer()) != null)
-        {
-            System.out.println(input);
-        }
-
-        saver.cerrarArchivo();
-*/
-
-       /*
-*/
-/*
-        final Gson gson = new Gson();
-        final Type tipoListaAutos = new TypeToken<List<Auto>>() {}.getType();
-        final List<Auto> listadoAutos = gson.fromJson(dataOutput, tipoListaAutos);
-        for(Auto auto: listadoAutos)
-        {
-         //   auto.mostrar();
-        }
-
-*/
     }
 }
