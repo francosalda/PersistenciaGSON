@@ -1,5 +1,8 @@
 package org.example;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class Auto {
 
     String nombre;
@@ -16,6 +19,13 @@ public class Auto {
     public void mostrar()
     {
         System.out.println("["+this.nombre+"] modelo: "+this.modelo + " potencia:" + this.potencia+ "HP");
+    }
+
+    public String serializar()
+    {
+        final Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
+        final String representacionJSON = prettyGson.toJson(this);
+        return  representacionJSON;
     }
 
 }
