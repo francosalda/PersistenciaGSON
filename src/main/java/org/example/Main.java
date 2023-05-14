@@ -36,11 +36,12 @@ public class Main {
         }
         else {
 
+            Pintura pintura1 = new Pintura("Azul electrico",101);
             System.out.println("No se encontro archivo con datos pre-existentes");
             ArrayList<Auto> listaAutos = new ArrayList<>();
-            Auto auto1 = new Auto("Honda Civic",2007,200);
-            Auto auto2 = new Auto("Fiat 147",1989,65);
-            Auto auto3 = new Auto("Buggati Chiron",2023,1600);
+            Auto auto1 = new Auto("Honda Civic",2007,200,pintura1);
+            Auto auto2 = new Auto("Fiat 147",1989,65,pintura1);
+            Auto auto3 = new Auto("Buggati Chiron",2023,1600,pintura1);
             listaAutos.add(auto1);
             listaAutos.add(auto2);
             listaAutos.add(auto3);
