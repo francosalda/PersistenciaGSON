@@ -11,6 +11,7 @@ public class Saver {
     Saver(String path)
     {
         this.path = path;
+        this.file = new File(path);
     }
 
 
@@ -30,8 +31,7 @@ public class Saver {
     public void abrirArchivoLectura()
     {
         if(this.br == null) {
-            File file = new File(this.path);
-            this.file = file;
+
             FileReader fr = null;
             try {
                 fr = new FileReader(file);
@@ -46,6 +46,7 @@ public class Saver {
     {
         if(this.pw == null)
         {
+
             try {
                 FileWriter fw = new FileWriter(this.file);
                 BufferedWriter bw = new BufferedWriter(fw);
@@ -57,9 +58,9 @@ public class Saver {
 
         }
     }
-    public void escribir()
+    public void escribir(String data)
     {
-
+        this.pw.write(data);
     }
 
     public void cerrarArchivo()
@@ -77,10 +78,9 @@ public class Saver {
             this.pw.close();
         }
     }
-    public boolean yaExisteArchivo(String path)
+    public boolean yaExisteArchivo()
     {
-        File f = new File(path);
-        return f.exists();
+       return this.file.exists();
     }
 
 }
