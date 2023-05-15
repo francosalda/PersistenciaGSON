@@ -39,11 +39,6 @@ public class Auto {
         this.ruedas = ruedas;
     }
 
-    public String serializar()
-    {
-        final Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
-        final String representacionJSON = prettyGson.toJson(this);
-        return  representacionJSON;
-    }
+
 
 }
